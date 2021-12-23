@@ -54,7 +54,8 @@ def apply_hp_filter(data, country, column='GDP Per Capita', lamb=6.25, style='se
     # Titles and labels etc.
     fig.suptitle(f'Hodrick-Prescott Filter ($\lambda = {{{lamb}}}$): {country}', fontsize='xx-large')
     ax1.set(title='GDP Per Capita ($USD)', ylabel='GDP Per Capita ($USD)')
-    ax2.set(title='Estimated Cyclical Component', ylabel='Estimated Cyclical Component')
+    ax2.set(title=r'Estimated Cyclical Component $\hat{c}_t = y_t - \hat{\tau}_t$',
+            ylabel='Estimated Cyclical Component')
 
     # Remove grid
     for ax in fig.get_axes():
